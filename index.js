@@ -17,6 +17,7 @@ rtm.on('message', (event) => {
     const browser = await puppeteer.launch({args: ['--lang=ko-KR']});
     const page = await browser.newPage();
     await page.goto(`http://${result}`);
+    await page.waitFor(2000);
     await page.screenshot({path: `${fileid}.png`});
     let realUrl = await page.url();
     let pageTitle = await page.title();
@@ -39,7 +40,7 @@ rtm.on('message', (event) => {
       console.log('Message sent: ', res.ts);
     })
     .catch(console.error);
-
+    console.log(`Uploading ${fileid}.png`);
     web.files.upload({
       filename:`${result}_${fileid}.png`,
       // You can use a ReadableStream or a Buffer for the file option
