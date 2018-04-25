@@ -1,0 +1,6 @@
+apps:
+  - script : ./index.js
+    name   : 'slack-shorturl-resolver'
+    watch  : true
+    env    :
+      SLACK_TOKEN: (Slack Bot Token Here)
