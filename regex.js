@@ -14,7 +14,7 @@ exports.matchShorts = (msg)=>{
   for(let i=0; i<shorts.length; i++){
     let result = msg.match(shorts[i])
     if(result != null || result != undefined){
-      return result[0];
+      return result[0].replace(">", "");
     }
   }
   return undefined;
