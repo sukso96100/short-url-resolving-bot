@@ -1,13 +1,15 @@
 const shorts = [
-  /goo.gl\/[0-9a-zA-Z $-_.+!*'(),]+/,
-  /bit.ly\/[0-9a-zA-Z $-_.+!*'(),]+/,
-  /muz.so\/[0-9a-zA-Z $-_.+!*'(),]+/,
-  /naver.me\/[0-9a-zA-Z $-_.+!*'(),]+/,
-  /tinyurl.com\/[0-9a-zA-Z $-_.+!*'(),]+/,
-  /ow.ly\/[0-9a-zA-Z $-_.+!*'(),]+/,
-  /adf.ly\/[0-9a-zA-Z $-_.+!*'(),]+/,
-  /is.gd\/[0-9a-zA-Z $-_.+!*'(),]+/,
-  /bit.do\/[0-9a-zA-Z $-_.+!*'(),]+/
+  /(http:\/\/|https:\/\/)?goo.gl\/[0-9a-zA-Z $-_.+!*'(),]+/,
+  /(http:\/\/|https:\/\/)?bit.ly\/[0-9a-zA-Z $-_.+!*'(),]+/,
+  /(http:\/\/|https:\/\/)?muz.so\/[0-9a-zA-Z $-_.+!*'(),]+/,
+  /(http:\/\/|https:\/\/)?naver.me\/[0-9a-zA-Z $-_.+!*'(),]+/,
+  /(http:\/\/|https:\/\/)?tinyurl.com\/[0-9a-zA-Z $-_.+!*'(),]+/,
+  /(http:\/\/|https:\/\/)?ow.ly\/[0-9a-zA-Z $-_.+!*'(),]+/,
+  /(http:\/\/|https:\/\/)?adf.ly\/[0-9a-zA-Z $-_.+!*'(),]+/,
+  /(http:\/\/|https:\/\/)?is.gd\/[0-9a-zA-Z $-_.+!*'(),]+/,
+  /(http:\/\/|https:\/\/)?bit.do\/[0-9a-zA-Z $-_.+!*'(),]+/,
+  /(http:\/\/|https:\/\/)?youtu.be\/[0-9a-zA-Z $-_.+!*'(),]+/
+
 ]
 
 exports.matchShorts = (msg)=>{
