@@ -13,6 +13,7 @@ const shorts = [
 ]
 
 exports.matchShorts = (msg)=>{
+  console.log("Matching url:"+msg);
   for(let i=0; i<shorts.length; i++){
     let result = msg.match(shorts[i])
     if(result != null || result != undefined){

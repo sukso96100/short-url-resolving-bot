@@ -7,16 +7,22 @@ const token = process.env.SLACK_TOKEN;
 const rtm = new RTMClient(token);
 const web = new WebClient(token);
 rtm.start();
-
+fs.readdir('.', (err, files)=>{
+   for (let i = 0, len = files.length; i < len; i++) {
+      if(files[i].endsWith(".png")){
+        fs.unlink(files[i], (err) => {});
+      }
+   }
+});
 rtm.on('message', (event) => {
   let result = short.matchShorts(event.text);
   console.log(result);
-  if(result != undefined){
+  if(result != undefined && event.user != "USLACKBOT"){
     let fileid = uuidv4();
     (async () => {
     const browser = await puppeteer.launch({args: ['--lang=ko-KR']});
     const page = await browser.newPage();
-    await page.goto(`http://${result}`);
+    await page.goto(`${result}`);
     await page.waitFor(2000);
     await page.screenshot({path: `${fileid}.png`});
     let realUrl = await page.url();
