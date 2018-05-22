@@ -8,7 +8,8 @@ const shorts = [
   /(http:\/\/|https:\/\/)?adf.ly\/[0-9a-zA-Z $-_.+!*'(),]+/,
   /(http:\/\/|https:\/\/)?is.gd\/[0-9a-zA-Z $-_.+!*'(),]+/,
   /(http:\/\/|https:\/\/)?bit.do\/[0-9a-zA-Z $-_.+!*'(),]+/,
-  /(http:\/\/|https:\/\/)?youtu.be\/[0-9a-zA-Z $-_.+!*'(),]+/
+  /(http:\/\/|https:\/\/)?youtu.be\/[0-9a-zA-Z $-_.+!*'(),]+/,
+  /(http:\/\/|https:\/\/)?tiny.cc\/[0-9a-zA-Z $-_.+!*'(),]+/
 
 ]
 
